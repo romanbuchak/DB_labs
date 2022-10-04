@@ -97,3 +97,11 @@ CREATE TABLE IF NOT exists `card_has_bonus` (
   CONSTRAINT `card_has_bonus_ibfk_2`
   FOREIGN KEY (`user_card_id`) REFERENCES `user_card` (`id`)
 ) ENGINE=InnoDB;
+
+CREATE INDEX song_idx ON song(name);
+CREATE INDEX download_idx ON download(price, quantity);
+CREATE INDEX service_user_idx ON service_user(name_of_profile);
+
+SHOW INDEX FROM song;
+SHOW INDEX FROM download;
+SHOW INDEX FROM service_user;
